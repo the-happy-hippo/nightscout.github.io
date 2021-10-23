@@ -258,7 +258,7 @@
 <p></br></p>
 <h2 id="security-and-safekeeping">Security and safekeeping<a class="headerlink" href="#security-and-safekeeping" title="Permanent link">⌁</a></h2>
 <ul>
-<li>Use the same email address for all accounts so you'll have access to all your accounts after installation. Do not use a disposable email address - use something you know you can access later.</li>
+<li>Use the same email address for all accounts so you'll have access to all your accounts after installation. <strong>Do not use a disposable email address</strong> - use something you know you can access later.</li>
 <li>Use a safe password for all accounts related to Nightscout, including the password for the email account for the accounts. We highly recommend using a password manager such as 1Password and allowing it to generate the passwords for you.</li>
 <li>Do not reuse the same password for all your accounts.</li>
 <li>Do not use your Dexcom or CareLink user name or password for Nightscout components.</li>
@@ -266,6 +266,10 @@
 <li>Do not share the API_SECRET or access tokens with administration privileges to anyone, ever. If you need to grant access to Nightscout, see below for instructions how to create access tokens for this purpose.</li>
 <li>Do not use Nightscout or any related applications on rooted and/or otherwise compromised devices, and ensure you always have the latest operating system and virus protection updates installed.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see <a href="../../vendors/heroku">here</a>.</p>
+</div>
 <p></br></p>
 <h2 id="https-and-certificate-errors">HTTPS and certificate errors<a class="headerlink" href="#https-and-certificate-errors" title="Permanent link">⌁</a></h2>
 <p>One of the core security mechanisms on web is the SSL encryption applied to HTTP connections. When installed to Heroku, Nightscout by default forces connections to use HTTPS, thus ensuring the connection is encrypted. For secure Nightscout use, it's crucial that you assume something is wrong if you ever see your browser complain the SSL certificate of your Nightscout site does not match or work as expected by the browser. This can be a sign of a so called Man In The Middle (MITM) attack and proceeding with the problematic certificate will subsequently compromise your Nightscout site. If you see an error related to SSL, you should immediately rename the site (see below for instructions).</p>

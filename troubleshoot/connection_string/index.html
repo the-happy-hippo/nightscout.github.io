@@ -263,15 +263,18 @@
 </ul>
 <p></br></p>
 <h1 id="unable-to-connect-to-mongo">Unable to connect to Mongo<a class="headerlink" href="#unable-to-connect-to-mongo" title="Permanent link">⌁</a></h1>
+<p><img src="../img/TShoot54.png" style="zoom:80%;" ></p>
 <p>Common reasons:</p>
 <ul>
+<li>The database Heroku is pointing to is not available (mLab services stopped in Dec 2020).  <a href="../../update/newdatabase/">Attach a new Atlas database</a>.</li>
 <li>
-<p>The database Heroku is pointing to is not available (mLab services stopped in Dec 2020).</p>
+<p>Your Atlas connection string is incorrect. Check <a href="#bad-connection-string">here</a>.</p>
 </li>
 <li>
-<p>Your Atlas connection string is incorrect</p>
+<p>If you haven't been using Nightscout for a while and it was working before, check your MongoDB Atlas database didn't go to sleep mode. If it did, select <code>Resume</code> to restart it. Once done, continue below with Heroku <a href="../../troubleshoot/troublehoot/#restart-all-dynos">restart all dynos</a>.</p>
 </li>
 </ul>
+<p><img src="../img/TShoot53.png" style="zoom:80%;" ></p>
 <p></br></p>
 <p>If you see this message</p>
 <p><img src="../img/TShoot06.png" style="zoom:80%;" ></p>

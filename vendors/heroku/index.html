@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>heroku - Nightscout</title>
+        <title>Heroku - Nightscout</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -186,8 +186,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#heroku" class="nav-link">heroku</a>
+            <li class="nav-item" data-level="1"><a href="#heroku" class="nav-link">Heroku</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#multiple-factor-authentication" class="nav-link">Multiple Factor Authentication</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -195,8 +199,76 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="heroku">heroku<a class="headerlink" href="#heroku" title="Permanent link">⌁</a></h1>
-<p>Coming soon</p></div>
+<h1 id="heroku">Heroku<a class="headerlink" href="#heroku" title="Permanent link">⌁</a></h1>
+<h2 id="multiple-factor-authentication">Multiple Factor Authentication<a class="headerlink" href="#multiple-factor-authentication" title="Permanent link">⌁</a></h2>
+<p>Multiple factor authentication (MFA) also called 2 factors authentication (2FA) is a safety feature preventing malicious access to an account. Once authenticated with your login and password you will be required to confirm your identity with another method, a second factor authentication.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended to setup two MFAs, the second being a copy of the recovery codes.</p>
+</div>
+<p><a href="https://help.salesforce.com/s/articleView?id=000356005&amp;type=1">The requirement begins on February 1, 2022. We encourage you to begin planning now for this change.</a> </p>
+<p>Until this date you can postpone creating a two factor authentication method but it is recommended to create one as soon as possible.</p>
+<p>Upon Heroku access, until Feb 1st 2021 you will be proposed to secure your account as shown below.</p>
+<p>To setup MFA and secure your account select <code>Continue</code>.</p>
+<p>If you want to enter your account without setting MFA just select <code>Later</code>.</p>
+<p><img src="../heroku/img/MFA01.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>You will also find the possibility to perform this operation from your Heroku account settings.</p>
+<p><img src="../heroku/img/MFA00.png" style="zoom:80%;" /></p>
+<p><img src="../heroku/img/MFA00a.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>You will be proposed various authentication options, see the explanation below.</p>
+<p>You should select at least one (Salesforce Authenticator is recommended) but might use more than one (registering a build in authenticator like a fingerprint reader is also a good idea) and you should print your Recovery Codes and keep them together with your Nightscout information (see <a href="../../nightscout/new_user/#record-your-information-in-a-safe-place">this section</a>).</p>
+<p><img src="../heroku/img/MFA02.png" style="zoom:80%;" /></p>
+<p></br></p>
+<h3 id="salesforce-authenticator">Salesforce Authenticator<a class="headerlink" href="#salesforce-authenticator" title="Permanent link">⌁</a></h3>
+<p>Salesforce Authenticator relies on an additional app you will need to install on your phone. It is available in the <a href="https://play.google.com/store/apps/details?id=com.salesforce.authenticator">Google Play Store</a> and the <a href="https://apps.apple.com/us/app/salesforce-authenticator/id782057975">Apple Store</a>.</p>
+<p>If you select this option (use the <code>Add</code> button) you will need to install the app to get the passcode called Two-Word Phrase</p>
+<p>Install the app and <code>Add an Account</code>.</p>
+<p><img src="../heroku/img/MFA03b.png" style="zoom:50%;" /></p>
+<p></br></p>
+<p>The app will give you a Two-Word Phrase (<code>perfect guide</code> in the example below)</p>
+<p><img src="../heroku/img/MFA03c.png" style="zoom:50%;" /></p>
+<p></br></p>
+<p>Copy it or type it into the authentication connection window in Salesforce Heroku and select <code>Connect</code>.</p>
+<p><img src="../heroku/img/MFA03.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>In the app, confirm with <code>Connect</code> then <code>Got It</code>.</p>
+<p><img src="../heroku/img/MFA03d.png" style="zoom:50%;" /></p>
+<p><img src="../heroku/img/MFA03e.png" style="zoom:50%;" /></p>
+<p></br></p>
+<p>You will now see Heroku in the app, with a single use code (that you usually won't need).</p>
+<p><img src="../heroku/img/MFA03f.png" style="zoom:50%;" /></p>
+<p></br></p>
+<p>Now, every time you will log into Heroku, you will have to confirm using your phone. Just accept the access.</p>
+<p></br></p>
+<p>Once the account added into Salesforce Authenticator you will be able to add another option that is Built-In Authenticator (like a fingerprint reader).</p>
+<p><img src="../heroku/img/MFA03g.png" style="zoom:80%;" /></p>
+<p></br></p>
+<h3 id="built-in-authenticator">Built-In Authenticator<a class="headerlink" href="#built-in-authenticator" title="Permanent link">⌁</a></h3>
+<p>You need Salesforce Authenticator setup in order to use this method (see above).</p>
+<p>Adding a built in authenticator will allow you to use your device biometric devices like a fingerprint reader.</p>
+<p>Select <code>Register</code> to add this identification method as a second factor. You will not be required to use the Salesforce Authenticator after registration. You can now remove it if you wish (not recommended).</p>
+<p><img src="../heroku/img/MFA08.png" style="zoom:80%;" /></p>
+<p>Note that you won't be able to use your fingerprint if created on a computer to unlock your account when using your phone and vice versa. You should add one fingerprint per device type.</p>
+<p></br></p>
+<h3 id="one-time-password-generator">One-Time Password Generator<a class="headerlink" href="#one-time-password-generator" title="Permanent link">⌁</a></h3>
+<p>You can use other apps to create your second factor, like Google Authenticator or Microsoft Authenticator apps. You will find both these apps in the Google Play Store and the Apple Store.</p>
+<p>First install one of these apps on your mobile device, then select <code>Add</code>.</p>
+<p>Scan the QR code with the app and <code>Connect</code>.</p>
+<p><img src="../heroku/img/MFA04.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Your Heroku will now be connected to this second factor authentication method and you will have to approve access, when logging into Heroku, with the app you selected.</p>
+<p><img src="../heroku/img/MFA04a.png" style="zoom:50%;" /></p>
+<p></br></p>
+<h3 id="security-key">Security Key<a class="headerlink" href="#security-key" title="Permanent link">⌁</a></h3>
+<p>Security key authentication requires you to use a hardware key. You probably won't be reading this if you own one.</p>
+<p><img src="../heroku/img/MFA05.png" style="zoom:80%;" /></p>
+<p></br></p>
+<h3 id="recovery-codes">Recovery Codes<a class="headerlink" href="#recovery-codes" title="Permanent link">⌁</a></h3>
+<p>You should enable and keep a copy of your recovery codes. This might eventually be the only way to recover your account access if something goes wrong with the other authentication method. Print a copy and keep it with your <a href="">Nightscout information</a> together with your diabetes documentation.</p>
+<p><img src="../heroku/img/MFA06.png" style="zoom:80%;" /></p>
+<p><img src="../heroku/img/MFA07.png" style="zoom:80%;" /></p></div>
             </div>
         </div>
 
