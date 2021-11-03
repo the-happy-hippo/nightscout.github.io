@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Attach a new Atlas database - Nightscout</title>
+        <title>Downgrade - Nightscout</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -135,7 +135,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Attach a new Atlas database</a>
+    <a href="../newdatabase/" class="dropdown-item">Attach a new Atlas database</a>
 </li>
                                     
 <li>
@@ -143,7 +143,7 @@
 </li>
                                     
 <li>
-    <a href="../downgrade/" class="dropdown-item">Downgrade</a>
+    <a href="./" class="dropdown-item active">Downgrade</a>
 </li>
                                 </ul>
                             </li>
@@ -173,12 +173,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../redeploy/" class="nav-link">
+                                <a rel="prev" href="../upd_stack/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../upd_stack/" class="nav-link">
+                                <a rel="next" href="../../troubleshoot/troublehoot/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -200,17 +200,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#attach-a-new-atlas-database-to-your-heroku-app" class="nav-link">Attach a new Atlas database to your Heroku app</a>
+            <li class="nav-item" data-level="1"><a href="#downgrading-your-nightscout-version" class="nav-link">Downgrading your Nightscout version</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#step-1-create-an-atlas-account" class="nav-link">Step 1: Create an Atlas account</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#step-2-add-your-connection-string-to-heroku" class="nav-link">Step 2: Add your connection string to Heroku</a>
+            <li class="nav-item" data-level="2"><a href="#roll-back-heroku" class="nav-link">Roll back Heroku</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#step-3-update-nightscout" class="nav-link">Step 3: Update Nightscout</a>
+            <li class="nav-item" data-level="2"><a href="#deploy-an-old-release" class="nav-link">Deploy an old release</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -221,211 +217,63 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="attach-a-new-atlas-database-to-your-heroku-app">Attach a new Atlas database to your Heroku app<a class="headerlink" href="#attach-a-new-atlas-database-to-your-heroku-app" title="Permanent link">⌁</a></h1>
-<p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Heroku.png" style="zoom:80%;" />+<img src="../../vendors/img/Atlas.png" style="zoom:80%;" /></p>
+<h1 id="downgrading-your-nightscout-version">Downgrading your Nightscout version<a class="headerlink" href="#downgrading-your-nightscout-version" title="Permanent link">⌁</a></h1>
+<p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Heroku.png" style="zoom:80%;" /></p>
 <hr />
-<p>In December 2020, mLab stopped operations.</p>
-<p>If you were using Heroku DIY and didn't migrate your database from mLab to Atlas you need to create a new database for your Nightscout site.</p>
 <p></br></p>
-<div class="admonition note">
-<p class="admonition-title">If you prefer to follow a video</p>
-<p>Use <a href="https://www.youtube.com/watch?v=hXSLBACjYQo">this easy guide</a>. Make sure to use only letters and numbers in database name and password. </p>
-</div>
-<p></br></p>
-<h2 id="step-1-create-an-atlas-account">Step 1: Create an Atlas account<a class="headerlink" href="#step-1-create-an-atlas-account" title="Permanent link">⌁</a></h2>
-<p></br></p>
-<ul>
-<li>Click here: <a href="https://www.mongodb.com/cloud/atlas">https://www.mongodb.com/cloud/atlas</a> and click <code>Start Free</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS17.png" style="zoom:70%;" /></p>
-<p></br></p>
-<ul>
-<li>Enter information then click <code>Get Started Free</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS18.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Select <code>Create a cluster in Shared Clusters (FREE)</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS19.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Leave all default values and click <code>Create Cluster</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS20.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>Atlas will create your default cluster, wait until completion… (can take more than 3 minutes)</p>
-<p><img src="../../nightscout/img/NewNS21.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Click on <code>CONNECT</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS22.png" style="zoom:100%;" /></p>
-<p></br></p>
-<ul>
-<li>Click on <code>Allow Access from Anywhere</code></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">If you don't allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database.</p>
-</div>
-<p><img src="../../nightscout/img/NewNS23.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Click on <code>Add IP Address</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS24.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Add a database username (for example <code>nightscout</code>) and a database password (in the example below <code>soo5ecret</code>).</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Database credentials</p>
-<p>Do not use your Atlas account credentials. Do not use special characters: only letters and numbers.</p>
-</div>
-<p>Write down these credentials in the boxes below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.</p>
-<p>Database password: <input type="text" id="myPwd" value="soo5ecret" size="20"></p>
-<p>Database username: <input type="text" id="myUsr" value="nightscout" size="20"></p>
-<p></br></p>
-<ul>
-<li>Then click <code>Create Database User</code>.</li>
-</ul>
-<p><img src="../../nightscout/img/NewNS25.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Click on <code>Choose a connection method</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS26.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Select <code>Connect your application</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS27.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Copy the connection string: click <code>Copy</code>.</li>
-</ul>
-<p><img src="../../nightscout/img/NewNS28.png" style="zoom:100%;" /></p>
-<p></br></p>
-<ul>
-<li>Paste the string in the box below.</li>
-</ul>
-<p><input type="text" id="myAtlas" value="" size="100"></p>
-<p></br></p>
-<div class="admonition info">
-<p class="admonition-title">It should be similar to this (<code>xxxxx</code> will be different):</p>
-<p><code>mongodb+srv://nightscout:&lt;password&gt;@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&amp;w=majority</code></p>
-</div>
-<p></br></p>
-<ul>
-<li>Invent a name for your database, this is not a critical information (for example <code>mycgmic</code>), note that default is <code>myFirstDatabase</code>.</li>
-</ul>
-<p>Database Name: <input type="text" id="mydB" value="mycgmic" size="20"></p>
-<p></br></p>
-<ul>
-<li>Click the <code>Generate</code> button (just here below this line: in this browser window you're reading):</li>
-</ul>
-<p><button onclick="Generate()">Generate</button></p>
-<p style="font-size:25px" id="result">The connection string will appear here</p>
-
-<script>
-var bAtlas;
-var sdB, sPwd;
-var sFinalString = "Not defined yet";
-
-function Generate()
-{
-  var sString = sFinalString;
-
-  bAtlas=0;
-  var sString = "Looks good!";
-  var sAtlas = document.getElementById("myAtlas").value;
-  sPwd = document.getElementById("myPwd").value;
-  sdB = document.getElementById("mydB").value;
-  var iAS = sAtlas.search("://");
-  if(iAS!=11) { sString = "Atlas URI should start with mongodb+srv://"; }
-  else
-  {
-    var iAP = sAtlas.search("<password>");
-    if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
-    else
-    {
-      var iAD = sAtlas.search("myFirstDatabase");
-      if(iAD==-1) { sString = "Atlas URI should contain myFirstDatabase"; }
-      else
-      {
-        bAtlas=1;
-        sString = sAtlas.substring(0,iAP);
-        sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
-        sString = sAtlas.substring(iAP+10, iAD);
-        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+15));
-      }
-    }
-  }
-
-  if(bAtlas) document.getElementById("result").innerHTML = sFinalString;
-  else document.getElementById("result").innerHTML = sString;
-}
-</script>
-
-<p></br></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Keep this string safely aside, it is called your <code>MONGODB_URI</code></p>
-</div>
-<p></br></p>
-<ul>
-<li>If you want to do it manually: replace <code>&lt;password&gt;</code> with your database password as noted previously (in the example below <code>soo5ecret</code>) and <code>&lt;dbname&gt;</code> by any text you want, say <code>mycgmic</code> for example. The result will be like this:</li>
-</ul>
-<p><code>mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&amp;w=majority</code></p>
+<p>There is usually no good reason to downgrade Nightscout unless being instructed to do so.</p>
+<p>Roll back can be really useful in case of mistakes and when awaiting bug fixes in minor releases.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There are no &lt; and &gt; characters in the final string, neither for password nor for database name.</p>
+<p>You can only roll back to a version that was previously deployed to your Heroku app.</p>
 </div>
 <p></br></p>
-<h2 id="step-2-add-your-connection-string-to-heroku">Step 2: Add your connection string to Heroku<a class="headerlink" href="#step-2-add-your-connection-string-to-heroku" title="Permanent link">⌁</a></h2>
+<h2 id="roll-back-heroku">Roll back Heroku<a class="headerlink" href="#roll-back-heroku" title="Permanent link">⌁</a></h2>
 <p></br></p>
-<p>Access your variables opening <a href="https://id.heroku.com/login">Heroku</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see <a href="../../vendors/heroku">here</a>.</p>
-</div>
+<p>Heroku keeps history of variables modifications and previous deploys so that you can return to a previous state easily in the cases of a configuration mistake or a bad deploy (like a bugged version). When rolling back to a previous deploy keep in mind all variables modified in the mean time will return to the value they had at that time.</p>
+<p>Since the database is external to Heroku, it will not be impacted by a roll back.</p>
 <p></br></p>
 <ul>
-<li>Select your app</li>
+<li>Log into <a href="https://id.heroku.com/login">Heroku</a>.</li>
+<li>Select your Nightscout app and go to  <code>Activity</code></li>
 </ul>
-<p><img src="../../nightscout/img/SetupNS00.png" style="zoom:80%;" /></p>
+<p><img src="../img/Downgrade00.png" style="zoom:80%;" ></p>
 <p></br></p>
 <ul>
-<li>Click <code>Settings</code></li>
+<li>You will see a list of events called <code>Activity Feed</code> and some indicated as possible roll-back points. Identify the last good situation and select <code>Roll back to here</code></li>
 </ul>
-<p><img src="../../nightscout/img/SetupNS01.png" style="zoom:80%;" /></p>
+<p><img src="../img/Downgrade01.png" style="zoom:80%;" ></p>
 <p></br></p>
 <ul>
-<li>Scroll down and click <code>Reveal Config Vars</code></li>
+<li>Identify and eventually write down the values of the variables that were changed in the meantime (arrows in the picture below) before selecting <code>Rollback</code>.</li>
 </ul>
-<p><img src="../../nightscout/img/SetupNS02.png" style="zoom:80%;" /></p>
+<p><img src="../img/Downgrade02.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>Upon completion your Heroku will be returned to the state it was at the selected rollback point.</p>
+<p>You can use it like this or upgrade to the latest released version later on.</p>
 <p></br></p>
 <ul>
-<li>Scroll down Config Vars until you’ll see <code>KEY</code> and <code>VALUE</code></li>
+<li>If you change your mind later you can rollback prior to your rollback and return to the starting point.</li>
 </ul>
-<p><img src="../../update/img/MigrateNS08.png" style="zoom:80%;" /> </p>
+<p><img src="../img/Downgrade03.png" style="zoom:80%;" ></p>
 <p></br></p>
-<ul>
-<li>In <code>KEY</code> write <code>MONGODB_URI</code> and paste in the field <code>VALUE</code> the connection string you obtained above from Atlas. Click Add</li>
-</ul>
-<p><img src="../../update/img/UpdateNS31.png" style="zoom:80%;" /> </p>
-<ul>
-<li>This new key will be inserted at the bottom of the list.</li>
-</ul>
+<h2 id="deploy-an-old-release">Deploy an old release<a class="headerlink" href="#deploy-an-old-release" title="Permanent link">⌁</a></h2>
 <p></br></p>
-<h2 id="step-3-update-nightscout">Step 3: Update Nightscout<a class="headerlink" href="#step-3-update-nightscout" title="Permanent link">⌁</a></h2>
-<p></br>
-<a href="../update/"><strong>Update your Nightscout to latest release!</strong></a> </p>
-<p>Versions older than 13.0.x won't probably run. </p>
-<p>Versions 13.x are not optimized for the Atlas database.</p>
+<p><strong>Experienced users only - not recommended</strong></p>
+<p>Deploying an archived release of Nightscout if it's not present in your Heroku activity list is more complex and involves installing Git on your computer.</p>
+<p>Before starting you need to have the project <a href="https://github.com/nightscout/cgm-remote-monitor">nightscout/cgm-remote-monitor</a> forked in your GitHub repository, the same way you did step 4a to 4c <a href="../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor">when you created your Nightscout</a>.</p>
+<p>Clone it locally (navigate to the folder where you'll want it saved locally before cloning). Replace YOUR-USERNAME by your GitHub user name.</p>
+<p><code>git clone https://github.com/YOUR-USERNAME/cgm-remote-monitor</code></p>
+<p>First identify the commit matching the release you want to use, look into the <a href="https://github.com/nightscout/cgm-remote-monitor/releases">released versions</a>.</p>
+<p><img src="../img/Downgrade04.png" style="zoom:80%;" ></p>
 <p></br></p>
-<p>Check your <a href="../../nightscout/profile_editor/#profile-view">profile time zone</a> is correct.</p>
-<p></br></p></div>
+<p>Then create a branch out of this commit (replace BRANCH by the branch name you want and indicate the COMMIT matching the one you need, in the case above b627d31):</p>
+<p><code>git checkout -b BRANCH COMMIT</code></p>
+<p>Push this new branch to your repository</p>
+<p><code>git push --set-upstream origin BRANCH</code></p>
+<p></br></p>
+<p>You can now deploy it in Heroku selecting it in the drop down menu.</p>
+<p><img src="../img/Downgrade05.png" style="zoom:80%;" ></p></div>
             </div>
         </div>
 

@@ -141,6 +141,10 @@
 <li>
     <a href="../../update/upd_stack/" class="dropdown-item">Update Heroku Stack</a>
 </li>
+                                    
+<li>
+    <a href="../../update/downgrade/" class="dropdown-item">Downgrade</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -512,7 +516,7 @@ function Generate()
 <p></br></p>
 <div class="admonition info">
 <p class="admonition-title">MOST COMMON ERRORS</p>
-<p>The <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> are NOT visible from within your Dexcom app or online account. These values are what you entered into your Dexcom mobile app when you logged into that app for the VERY FIRST time. The <code>BRIDGE_USER_NAME</code> is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.</p>
+<p>The <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> are NOT visible from within your Dexcom app or online account. These values are what you entered into your Dexcom mobile app when you logged into that app for the VERY FIRST time. The <code>BRIDGE_USER_NAME</code> is usually not your email address but recently newly created accounts do not have a user name. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Password</p>
@@ -531,6 +535,7 @@ function Generate()
 <p></br></p>
 <p>k) In <code>ENABLE</code>, copy and paste the following words (separated by a space) so that won't have to think about which you want now:</p>
 <p><code>careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors</code></p>
+<p>Also add <code>bridge</code> if you're using your Dexcom share account as a data source.</p>
 <p><img src="..\img\NewNS38.png" style="zoom:80%;" /></p>
 <div class="admonition note">
 <p class="admonition-title"><code>ENABLE</code> words</p>

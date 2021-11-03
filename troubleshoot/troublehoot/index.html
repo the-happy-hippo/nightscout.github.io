@@ -141,6 +141,10 @@
 <li>
     <a href="../../update/upd_stack/" class="dropdown-item">Update Heroku Stack</a>
 </li>
+                                    
+<li>
+    <a href="../../update/downgrade/" class="dropdown-item">Downgrade</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
@@ -169,7 +173,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../update/upd_stack/" class="nav-link">
+                                <a rel="prev" href="../../update/downgrade/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -386,10 +390,15 @@
 <p>Check your remaining dyno hours in Heroku, click on your profile picture top right and select <code>Account Settings</code>, then <code>Billing</code>.</p>
 </li>
 <li>
-<p>An account without credit card information has 550 free dyno hours, with credit card information 1000.</p>
+<p>An account without credit card information has 550 <a href="https://devcenter.heroku.com/articles/free-dyno-hours#usage">free dyno hours</a>, with credit card information 1000.</p>
 </li>
 </ul>
 <p><img src="../img/TShoot42.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>An account with credit card information can only hold one Nightscout site. You need one account per site, and you can simplify multiple sites management as explained <a href="../../nightscout/multiadmin/">here</a>.</li>
+<li>If Heroku runs out of free dynos, check you don't have other deployments wasting your free dyno hours and eventually <a href="../cleanup/#heroku">cleanup or stop unused apps</a>.</li>
+</ul>
 <p></br></p>
 <h3 id="boot-error-unable-to-connect-to-mongo">Boot Error - Unable to connect to Mongo<a class="headerlink" href="#boot-error-unable-to-connect-to-mongo" title="Permanent link">⌁</a></h3>
 <p></br></p>
@@ -436,6 +445,11 @@
 <p>The <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> are NOT visible from within your Dexcom mobile app or online account. The values of them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. If you have double-checked everything else that could be incorrect and BGs still aren't showing in Nightscout, then you likely have those Bridge values incorrect. To fix that, delete your Dexcom app (don't stop the session before deleting the app...just keep it going). Download the app again from the iPhone's App Store and login to the freshly-downloaded Dexcom app. <strong>Take note</strong> that deleting the app will not stop your session, your session will pick right back up once the transmitter pairs again. The <code>BRIDGE_USER_NAME</code> is not an email address. Use that exact same login now in your Heroku settings. You can leave your Loop's Share account info blank...you just need the transmitter ID going forward.</p>
 </div>
 <h3 id="dexcom-username-issue">Dexcom username issue<a class="headerlink" href="#dexcom-username-issue" title="Permanent link">⌁</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New Dexcom users are not being assigned a username anymore but need to log with their email address. If you don't have a username, you should be able to use <code>bridge</code> with an email address, make sure you <a href="../../update/update/">update Nightscout to the latest release</a>.</p>
+</div>
+<p></br></p>
 <p>It seems that Dexcom share somewhere in its systems is not capable of using the username other than ordinary letters.</p>
 <p>By changing the username, this has been solved for everyone who has tried so far. If that doesn't work for you, please report it at <a href="https://github.com/nightscout/cgm-remote-monitor/issues/5608">https://github.com/nightscout/cgm-remote-monitor/issues/5608</a> or if you can comment on any Facebook post that linked to this site.</p>
 <h4 id="change-username">Change username<a class="headerlink" href="#change-username" title="Permanent link">⌁</a></h4>

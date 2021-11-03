@@ -141,6 +141,10 @@
 <li>
     <a href="../../update/upd_stack/" class="dropdown-item">Update Heroku Stack</a>
 </li>
+                                    
+<li>
+    <a href="../../update/downgrade/" class="dropdown-item">Downgrade</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
@@ -267,12 +271,11 @@
 <p>Common reasons:</p>
 <ul>
 <li>The database Heroku is pointing to is not available (mLab services stopped in Dec 2020).  <a href="../../update/newdatabase/">Attach a new Atlas database</a>.</li>
-<li>
-<p>Your Atlas connection string is incorrect. Check <a href="#bad-connection-string">here</a>.</p>
-</li>
-<li>
-<p>If you haven't been using Nightscout for a while and it was working before, check your MongoDB Atlas database didn't go to sleep mode. If it did, select <code>Resume</code> to restart it. Once done, continue below with Heroku <a href="../../troubleshoot/troublehoot/#restart-all-dynos">restart all dynos</a>.</p>
-</li>
+<li>Your Atlas connection string is incorrect. Check <a href="#bad-connection-string">here</a>.</li>
+</ul>
+<h4 id="mongodb-paused">MongoDB paused<a class="headerlink" href="#mongodb-paused" title="Permanent link">⌁</a></h4>
+<ul>
+<li>If you haven't been using Nightscout for a while and it was working before, check your MongoDB Atlas database didn't go to sleep mode. If it did, select <code>Resume</code> to restart it. Once done, continue below with Heroku <a href="../../troubleshoot/troublehoot/#restart-all-dynos">restart all dynos</a>.</li>
 </ul>
 <p><img src="../img/TShoot53.png" style="zoom:80%;" ></p>
 <p></br></p>
