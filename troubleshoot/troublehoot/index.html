@@ -252,6 +252,18 @@
   
 
       
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../translate/" class="md-tabs__link">
+      Translation
+    </a>
+  </li>
+
+      
     </ul>
   </div>
 </nav>
@@ -414,7 +426,35 @@
   
     <li class="md-nav__item">
       <a href="../../vendors/NSaaS/" class="md-nav__link">
-        Nightscout as a service
+        Paid hosting overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/T1Pal/new_user/" class="md-nav__link">
+        Paid hosting: T1Pal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/10BE/" class="md-nav__link">
+        Paid hosting: 10BE
       </a>
     </li>
   
@@ -809,8 +849,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Troubleshooting
@@ -828,8 +866,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -838,8 +874,285 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overall-third-party-services" class="md-nav__link">
+    Overall third party services
+  </a>
+  
+    <nav class="md-nav" aria-label="Overall third party services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#before-troubleshooting" class="md-nav__link">
     Before troubleshooting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-and-heroku" class="md-nav__link">
+    GitHub and Heroku
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub and Heroku">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-valid-github-directory-could-not-be-found" class="md-nav__link">
+    A valid GitHub Directory could not be found.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-lost-access-to-my-github" class="md-nav__link">
+    I lost access to my GitHub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cannot-find-cgm-remote-monitor-in-heroku-no-github-source-visible" class="md-nav__link">
+    Cannot find cgm-remote-monitor in Heroku / No GitHub source visible
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cannot-find-cgm-remote-monitor-in-heroku-item-cannot-be-retrieved" class="md-nav__link">
+    Cannot find cgm-remote-monitor in Heroku: Item cannot be retrieved
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-cant-log-into-heroku" class="md-nav__link">
+    I can't log into Heroku
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atlas" class="md-nav__link">
+    Atlas
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limit-of-one-free-cluster" class="md-nav__link">
+    Limit of one free cluster.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nightscout-page-doesnt-open" class="md-nav__link">
+    Nightscout page doesn't open
+  </a>
+  
+    <nav class="md-nav" aria-label="Nightscout page doesn't open">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-error" class="md-nav__link">
+    Application Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-all-dynos" class="md-nav__link">
+    Restart all dynos
+  </a>
+  
+    <nav class="md-nav" aria-label="Restart all dynos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nightscout-stopped-working-after-a-few-weeks" class="md-nav__link">
+    Nightscout stopped working after a few weeks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot-error-unable-to-connect-to-mongo" class="md-nav__link">
+    Boot Error - Unable to connect to Mongo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-data-in-nightscout" class="md-nav__link">
+    No data in Nightscout
+  </a>
+  
+    <nav class="md-nav" aria-label="No data in Nightscout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-data-not-showing" class="md-nav__link">
+    Dexcom data not showing
+  </a>
+  
+    <nav class="md-nav" aria-label="Dexcom data not showing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-share" class="md-nav__link">
+    Dexcom Share
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heroku-settings" class="md-nav__link">
+    Heroku Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-username-issue" class="md-nav__link">
+    Dexcom username issue
+  </a>
+  
+    <nav class="md-nav" aria-label="Dexcom username issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-username" class="md-nav__link">
+    Change username
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-account" class="md-nav__link">
+    Create new account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reinstall-dexcom-transmitter-app" class="md-nav__link">
+    Reinstall Dexcom Transmitter app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-dexcom-data-in-nightscout" class="md-nav__link">
+    Update Dexcom data in Nightscout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-or-carelink-data-stopping-after-a-while" class="md-nav__link">
+    Dexcom or CareLink data stopping after a while
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-code-instead-of-a-bg-value" class="md-nav__link">
+    Error code instead of a BG value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-timing-issues" class="md-nav__link">
+    Data timing issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Data timing issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basal-is-shifted-in-time" class="md-nav__link">
+    Basal is shifted in time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-in-the-future" class="md-nav__link">
+    Data in the future
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-full" class="md-nav__link">
+    Database full
+  </a>
+  
+    <nav class="md-nav" aria-label="Database full">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleanup" class="md-nav__link">
+    Cleanup:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports-slow-loading-or-timeout" class="md-nav__link">
+    Reports slow loading or timeout
   </a>
   
 </li>
@@ -887,6 +1200,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../translate/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -905,8 +1233,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -915,8 +1241,285 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overall-third-party-services" class="md-nav__link">
+    Overall third party services
+  </a>
+  
+    <nav class="md-nav" aria-label="Overall third party services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#before-troubleshooting" class="md-nav__link">
     Before troubleshooting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-and-heroku" class="md-nav__link">
+    GitHub and Heroku
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub and Heroku">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-valid-github-directory-could-not-be-found" class="md-nav__link">
+    A valid GitHub Directory could not be found.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-lost-access-to-my-github" class="md-nav__link">
+    I lost access to my GitHub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cannot-find-cgm-remote-monitor-in-heroku-no-github-source-visible" class="md-nav__link">
+    Cannot find cgm-remote-monitor in Heroku / No GitHub source visible
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cannot-find-cgm-remote-monitor-in-heroku-item-cannot-be-retrieved" class="md-nav__link">
+    Cannot find cgm-remote-monitor in Heroku: Item cannot be retrieved
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-cant-log-into-heroku" class="md-nav__link">
+    I can't log into Heroku
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atlas" class="md-nav__link">
+    Atlas
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limit-of-one-free-cluster" class="md-nav__link">
+    Limit of one free cluster.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nightscout-page-doesnt-open" class="md-nav__link">
+    Nightscout page doesn't open
+  </a>
+  
+    <nav class="md-nav" aria-label="Nightscout page doesn't open">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-error" class="md-nav__link">
+    Application Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-all-dynos" class="md-nav__link">
+    Restart all dynos
+  </a>
+  
+    <nav class="md-nav" aria-label="Restart all dynos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nightscout-stopped-working-after-a-few-weeks" class="md-nav__link">
+    Nightscout stopped working after a few weeks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot-error-unable-to-connect-to-mongo" class="md-nav__link">
+    Boot Error - Unable to connect to Mongo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-data-in-nightscout" class="md-nav__link">
+    No data in Nightscout
+  </a>
+  
+    <nav class="md-nav" aria-label="No data in Nightscout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-data-not-showing" class="md-nav__link">
+    Dexcom data not showing
+  </a>
+  
+    <nav class="md-nav" aria-label="Dexcom data not showing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-share" class="md-nav__link">
+    Dexcom Share
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heroku-settings" class="md-nav__link">
+    Heroku Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-username-issue" class="md-nav__link">
+    Dexcom username issue
+  </a>
+  
+    <nav class="md-nav" aria-label="Dexcom username issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-username" class="md-nav__link">
+    Change username
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-account" class="md-nav__link">
+    Create new account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reinstall-dexcom-transmitter-app" class="md-nav__link">
+    Reinstall Dexcom Transmitter app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-dexcom-data-in-nightscout" class="md-nav__link">
+    Update Dexcom data in Nightscout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-or-carelink-data-stopping-after-a-while" class="md-nav__link">
+    Dexcom or CareLink data stopping after a while
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-code-instead-of-a-bg-value" class="md-nav__link">
+    Error code instead of a BG value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-timing-issues" class="md-nav__link">
+    Data timing issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Data timing issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basal-is-shifted-in-time" class="md-nav__link">
+    Basal is shifted in time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-in-the-future" class="md-nav__link">
+    Data in the future
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-full" class="md-nav__link">
+    Database full
+  </a>
+  
+    <nav class="md-nav" aria-label="Database full">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleanup" class="md-nav__link">
+    Cleanup:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports-slow-loading-or-timeout" class="md-nav__link">
+    Reports slow loading or timeout
   </a>
   
 </li>
@@ -934,12 +1537,12 @@
               
                 
                 
-                <h1 id="overall-third-party-services">Overall third party services<a class="headerlink" href="#overall-third-party-services" title="Permanent link">⌁</a></h1>
+                <h2 id="overall-third-party-services">Overall third party services<a class="headerlink" href="#overall-third-party-services" title="Permanent link">⌁</a></h2>
 <p></br></p>
 <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> DIY Nightscout</p>
 <p>For <a href="../../index#nightscout-as-a-service">Nightscout as a service</a> contact directly <strong><em>support</em></strong> at <strong><em>t1pal.com</em></strong> or use the <code>Get Support</code> links.</p>
 <p></br></p>
-<h2 id="before-troubleshooting">Before troubleshooting<a class="headerlink" href="#before-troubleshooting" title="Permanent link">⌁</a></h2>
+<h3 id="before-troubleshooting">Before troubleshooting<a class="headerlink" href="#before-troubleshooting" title="Permanent link">⌁</a></h3>
 <p></br></p>
 <p>Check the services you're using.</p>
 <p>Dexcom: <a href="https://status.dexcom.com/">https://status.dexcom.com/</a></p>
@@ -949,7 +1552,7 @@
 <p>Heroku: <a href="https://status.heroku.com/">https://status.heroku.com/</a></p>
 <p>Atlas: <a href="https://status.cloud.mongodb.com/">https://status.cloud.mongodb.com/</a></p>
 <p></br></p>
-<h1 id="github-and-heroku">GitHub and Heroku<a class="headerlink" href="#github-and-heroku" title="Permanent link">⌁</a></h1>
+<h2 id="github-and-heroku">GitHub and Heroku<a class="headerlink" href="#github-and-heroku" title="Permanent link">⌁</a></h2>
 <p></br></p>
 <h3 id="a-valid-github-directory-could-not-be-found">A valid GitHub Directory could not be found.<a class="headerlink" href="#a-valid-github-directory-could-not-be-found" title="Permanent link">⌁</a></h3>
 <p></br></p>
@@ -999,7 +1602,7 @@
 <h3 id="i-cant-log-into-heroku">I can't log into Heroku<a class="headerlink" href="#i-cant-log-into-heroku" title="Permanent link">⌁</a></h3>
 <p>If you lost your password use the <a href="https://id.heroku.com/account/password/reset">password reset option</a>.</p>
 <p>If you lost your authenticator use the recovery codes (that you hopefully saved when <a href="../../vendors/heroku/">securing your account)</a>.</p>
-<p>If you lost or don't have anymore access to the email you used to create your Heroku account you will need to deploy a new Nightscout site. You can use the same GitHub account and the same MongodB Atlas database you currently have but will have to change the name as it's already in use. First <a href="../../troubleshoot/connection_string/#recover-your-connection-string">recover your connection string</a>, and proceed to <a href="../../nightscout/new_user/">creating a new Nightscout</a> <strong>skipping Step 3</strong>.</p>
+<p>If you lost or don't have anymore access to the email you used to create your Heroku account you will need to deploy a new Nightscout site. You can use the same GitHub account and the same MongodB Atlas database you currently have but will have to use another Nightscout site name in Heroku as the current one is already in use. First <a href="../../troubleshoot/connection_string/#recover-your-connection-string">recover your connection string</a>, and proceed to <a href="../../nightscout/new_user/">creating a new Nightscout</a> <strong>skipping Step 3</strong>.</p>
 <p></br></p>
 <h1 id="atlas">Atlas<a class="headerlink" href="#atlas" title="Permanent link">⌁</a></h1>
 <p></br></p>
@@ -1082,7 +1685,7 @@
 <li>If Heroku runs out of free dynos, check you don't have other deployments wasting your free dyno hours and eventually <a href="../cleanup/#heroku">cleanup or stop unused apps</a>.</li>
 </ul>
 <p></br></p>
-<h3 id="boot-error-unable-to-connect-to-mongo">Boot Error - Unable to connect to Mongo<a class="headerlink" href="#boot-error-unable-to-connect-to-mongo" title="Permanent link">⌁</a></h3>
+<h2 id="boot-error-unable-to-connect-to-mongo">Boot Error - Unable to connect to Mongo<a class="headerlink" href="#boot-error-unable-to-connect-to-mongo" title="Permanent link">⌁</a></h2>
 <p></br></p>
 <p>Look at this <a href="../connection_string/">dedicated page</a>.</p>
 <p><img src="../img/TShoot43.png" style="zoom:80%;" ></p>
@@ -1151,7 +1754,7 @@
 <li>Answer yes to the question "have you inserted sensor"</li>
 </ul>
 <p>You then have to re-invite your followers.</p>
-<h4 id="nightscout">Nightscout<a class="headerlink" href="#nightscout" title="Permanent link">⌁</a></h4>
+<h4 id="update-dexcom-data-in-nightscout">Update Dexcom data in Nightscout<a class="headerlink" href="#update-dexcom-data-in-nightscout" title="Permanent link">⌁</a></h4>
 <p>Check your Heroku settings match your new credentials (see above)</p>
 <p></br></p>
 <h3 id="dexcom-or-carelink-data-stopping-after-a-while">Dexcom or CareLink data stopping after a while<a class="headerlink" href="#dexcom-or-carelink-data-stopping-after-a-while" title="Permanent link">⌁</a></h3>
